@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordify</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">Wordify</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <%if(message >0){%>
+                            <a id="sign" class="nav-link" href="/home/profile">
+                                <%= name%>
+                            </a>
+                            <%}else{%>
+                                <a id="sign" class="nav-link" href="/signin">Sign in</a>
+                                <%}%>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sec3">Latest Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/write">Write</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About us</a>
+                    </li>
+
+                    <li style="display:auto;" class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dashboard
+                        </a>
+                        <div style="border: 1px solid black; border-radius: 10%;" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/dashboard">Manage Post</a>
+                            <div class="dropdown-divider"></div>
+                            <%if(message>0){%>
+                                <a class="dropdown-item" href="/home/logout">Sign out</a>
+                                <%}%>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="sec1">
+        <h1>Create the space for your thinking to take off.</h1>
+        <h3 style="margin-top:35px;">It's easy and free to share your thinking on any topic, connect with an audience, express yourself with a range of publishing tools, and even earn money for your work.</h3>
+    </div>
+    <div class="sec2">
+        <h2>Join millions of others</h2>
+        <p>
+            Whether sharing your expertise, breaking news, or whatever’s on your mind, you’re in good company on Wordify.<br> Sign up to discover why millions of people have published their passions here.<br><br>
+            <a class="btn btn-dark" href="/register">Get Started</a>
+        </p>
+    </div>
+    <div id="sec3">
+        <h4>Latest Posts</h4>
+        <div class="row">
+            <div class="card col-md-2" style="height: 30rem; width: 18rem; margin:10px 10px 5px 60px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">The Top 3 New JavaScript ES 2021 (ES 12) Features I’m Excited About The logical assignment operator, Promise.any,and numeric separators
+                        <br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card col-md-2" style="height: 30rem; width: 18rem; margin:10px 10px 5px 40px">
+                <img src="https://images.unsplash.com/photo-1550645612-83f5d594b671?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">JavaScript - The Complete Guide 2020 (Beginner + Advanced
+                        <br>
+
+                        <br> Modern JavaScript from the beginning - all the way up to JS expert level!
+                        <br>
+                        <br>
+                        <a class="btn btn-success" href="https://www.udemy.com/course/javascript-the-complete-guide-2020-beginner-advanced/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-0EqLSET0_CzW6trzaDx83w&LSNPUBID=JVFxdTr9V80&utm_source=aff-campaign&utm_medium=udemyads"
+                            target="_blank">enroll now</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card col-md-2" style="height: 30rem; width: 18rem; margin:10px 10px 5px 40px">
+                <img style="margin-top: 10px;" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Learning Python: Reading and Writing Text Files After a certain point, you are going to want to start storing some of the data processed by your Python programs....
+                    </p>
+                </div>
+            </div>
+            <div class="card col-md-2" style="height: 30rem; width: 18rem; margin:10px 10px 5px 40px">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb7p0WBw8g5jz7Wj37SWj1odnGAcJnO126hw&usqp=CAU" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">The Web Developer Bootcamp 2020 COMPLETELY REDONE - The only course you need to learn web development - HTML, CSS, JS, Node, and More!
+                        <a class="btn btn-success" href="https://www.udemy.com/course/the-web-developer-bootcamp/?LSNPUBID=JVFxdTr9V80&ranEAID=JVFxdTr9V80&ranMID=39197&ranSiteID=JVFxdTr9V80-zkpqM_FBzE.rjgkAG3R.gA&utm_medium=udemyads&utm_source=aff-campaign" target="_blank">enroll now</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h6 style="text-align: center;">Contact us </h6>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/jatin-more-8b444a193" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://twitter.com/JatinMore9" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="https://www.instagram.com/jatin_more/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <h6>&copy; 2020 Wordify.com</h6>
+    </footer>
+</body>
+
+</html>
