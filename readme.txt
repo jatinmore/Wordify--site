@@ -19,3 +19,4 @@
 //after server starts
 
 	open browser //localhost:6969  (tharki insan wo port number hai);
+	sadasdad
