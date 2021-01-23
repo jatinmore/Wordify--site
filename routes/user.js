@@ -85,7 +85,7 @@ exports.write = function(req, res) {
             res.render('./signin');
         } else {
 
-            var sql = "INSERT INTO posts(title,sub_title,blog_txt,u_id,image) VALUES ('" + title + "','" + head + "','" + blog + "','" + userId + "','"+ pic + "')";
+            var sql = "INSERT INTO posts(title,sub_title,blog_txt,u_id,image) VALUES ('" + title + "','" + head + "','" + blog + "','" + userId + "','"+ pic +"')";
 
             var query = db.query(sql, function(err, result) {
                 //show message to user that blog has been posted successfully
