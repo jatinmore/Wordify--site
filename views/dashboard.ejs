@@ -33,7 +33,7 @@
             position: absolute;
         }
 
-        .container{
+       /*  .container{
             display: flex;
         }
         .posts{
@@ -42,11 +42,19 @@
             justify-content: center;
             align-items: center;
             background-color: white;
-            width: max-content;
+            width: 50%;
             margin-left: 20%;
 
         }
-      
+       */
+       .container{
+           background-color: whitesmoke;
+           border: 1px solid black;
+          margin-bottom: 15px;
+          margin-top: 10px;
+          border-radius: 10px;
+          padding: 15px;
+       }
         
     </style>
 </head>
@@ -76,6 +84,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             <%=result[i].blog_txt%>
+                                <br>
                                 <br>
                         </p>
                     </div>
