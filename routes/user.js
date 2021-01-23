@@ -75,7 +75,8 @@ exports.write = function(req, res) {
         var post = req.body;
         var title = post.title;
         var head = post.subhead;
-        var blog = post.blogtxt;
+        var blog = post.blogtxt; 
+        var pic=post.img;
         var userId = req.session.userId;
         var s_name = req.session.user;
         console.log(userId);
@@ -84,7 +85,7 @@ exports.write = function(req, res) {
             res.render('./signin');
         } else {
 
-            var sql = "INSERT INTO posts(title,sub_title,blog_txt,u_id) VALUES ('" + title + "','" + head + "','" + blog + "','" + userId + "')";
+            var sql = "INSERT INTO posts(title,sub_title,blog_txt,u_id,image) VALUES ('" + title + "','" + head + "','" + blog + "','" + userId + "','"+ pic + "')";
 
             var query = db.query(sql, function(err, result) {
                 //show message to user that blog has been posted successfully
@@ -145,3 +146,4 @@ exports.profile = function(req, res) {
     });
 };
 
+//test
